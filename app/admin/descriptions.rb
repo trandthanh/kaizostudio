@@ -1,17 +1,15 @@
 ActiveAdmin.register Description do
 
   permit_params :page, :role, :style, :text
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+
+  form do |f|
+    f.inputs do
+      f.input :page, :as => :select, :collection => ["Home", "Agence", "Réalisations"]
+      f.input :role, :as => :select, :collection => ["1", "2", "3", "4"]
+      f.input :style, :as => :select, :collection => ["Heading Roboto 100 Black", "Body Roboto 300 Grey"]
+      f.input :text
+    end
+    f.actions
+  end
 
 end
