@@ -6,7 +6,7 @@ class RealisationsController < ApplicationController
   end
 
   def show
-
+    @realisation = Realisation.find(params[:id])
   end
 
   def new
