@@ -1,0 +1,15 @@
+<div class="header">
+
+  <div class="header-left">
+    <%= link_to image_tag("kaizo-studio-logo.png", id: "logo"), root_path %>
+
+    <h6><%= link_to "l'agence", agence_path, class: active_path(agence_path) %></h6>
+    <h6><%= link_to "réalisations", realisations_path, class: active_path(realisations_path) %></h6>
+    <h6><%= link_to "contact", contact_path, class: active_path(contact_path) %></h6>
+  </div>
+
+  <div class="header-right">
+    <h6>+33 9 61 66 26 07</h6>
+  </div>
+
+</div>

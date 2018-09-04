@@ -1,5 +1,10 @@
 body {
-  background-color: white;
+  h1, h6 {
+    color: black;
+  }
+  p {
+    color: $gray;
+  }
 }
 
 .general-styling {

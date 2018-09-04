@@ -1,0 +1,32 @@
+#logo {
+  height: 30px;
+}
+
+.header {
+  height: 70px;
+  padding-top: 20px;
+  a {
+    color: $gray;
+    text-decoration: none;
+    font-weight: 400;
+    &:hover {
+      color: black;
+    }
+  }
+  .active {
+  color: black;
+  }
+  h6 {
+    font-weight: 400;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
