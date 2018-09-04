@@ -1,0 +1,2 @@
+class RealisationsController < ApplicationController
+end
