@@ -1,0 +1,30 @@
+.footer {
+  height: 50px;
+  border-top: 1.6px solid $light-gray;
+  p {
+    font-size: 13px;
+  }
+  a {
+    text-decoration: none;
+    color: $gray;
+    font-weight: 300;
+  }
+  display: flex;
+  justify-content: space-between;
+  i {
+    font-size: 13px;
+  }
+  align-items: center;
+}
+
+.footer-right {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
