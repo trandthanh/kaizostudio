@@ -1,11 +1,11 @@
 <h1>Pages#home</h1>
 
-<p><%#= @home_descriptions.text %></p>
+<p><%= @home_descriptions.text %></p>
 
 <br>
 
-<%# @featured_realisations.each do |fr| %>
-  <p><%#= fr.title %></p>
-<%# end %>
+<% @featured_realisations.each do |fr| %>
+  <p><%= fr.title %></p>
+<% end %>
 
 <h5>Hello</h5>
