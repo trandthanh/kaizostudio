@@ -3,6 +3,8 @@ class PagesController < ApplicationController
 
   def home
     @home_descriptions = Description.find_by(page: "Home")
+
+    @featured_realisations = Realisation.where(:featured => true)
   end
 
   def agence

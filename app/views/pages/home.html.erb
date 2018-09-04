@@ -2,3 +2,9 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <%= @home_descriptions.text %>
+
+<br>
+
+<% @featured_realisations.each do |fr| %>
+  <%= fr.title %>
+<% end %>
