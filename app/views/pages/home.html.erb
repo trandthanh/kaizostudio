@@ -1,14 +1,22 @@
 <div class="home-upper">
   <div class="row">
-    <div class="home-left col-md-6 col-sm-12">
+    <div class="page-left col-md-6 col-sm-12">
       <% @home_descriptions.sort_by {|hd| [hd.role] }.each do |hd| %>
-        <div <%= hd.style == "Heading Roboto 100 Black" ? "class=roboto-black-big" : "class=roboto-gray-small" %>>
+        <div
+          <% if hd.style == "Heading Roboto 300 Black" %>
+            <%= "class=roboto-black-big" %>
+          <% elsif hd.style == "Body Roboto 300 Grey" %>
+            <%= "class=roboto-gray-small" %>
+          <% elsif hd.style == "Body Roboto 400 Grey" %>
+            <%= "class=roboto-gray-bold-small" %>
+          <% end %>
+        >
           <%= simple_format(hd.text, {}, wrapper_tag: "h1") %>
         </div>
         <br>
       <% end %>
     </div>
-    <div class="home-right col-md-6 col-sm-12">
+    <div class="page-right col-md-6 col-sm-12">
       <%= link_to image_tag("kaizo-studio-design-appartement-aboukir-paris.png", id: "banner"), root_path %>
     </div>
   </div>

@@ -5,8 +5,8 @@ ActiveAdmin.register Description do
   form do |f|
     f.inputs do
       f.input :page, :as => :select, :collection => ["Home", "Agence", "Réalisations"]
-      f.input :role, :as => :select, :collection => ["1", "2", "3", "4"]
-      f.input :style, :as => :select, :collection => ["Heading Roboto 100 Black", "Body Roboto 300 Grey"]
+      f.input :role, :as => :select, :collection => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"]
+      f.input :style, :as => :select, :collection => ["Heading Roboto 300 Black", "Body Roboto 300 Grey", "Body Roboto 400 Grey"]
       f.input :text
     end
     f.actions
