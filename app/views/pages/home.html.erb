@@ -1,11 +1,27 @@
-<h1>Pages#home</h1>
+<div class="home-wrapper">
+  <div class="home-upper">
+    <div class="home-left">
 
-<p><%= simple_format(@home_descriptions.text) %></p>
+      <% @home_descriptions.sort_by {|hd| [hd.role] }.each do |hd| %>
+        <div <%= hd.style == "Heading Roboto 100 Black" ? "class=roboto-black-big" : "class=roboto-gray-small" %>>
+          <%= simple_format(hd.text, {}, wrapper_tag: "h1") %>
+        </div>
+      <% end %>
+    </div>
+    <div class="home-right">
+      <%= link_to image_tag("kaizo-studio-design-appartement-aboukir-paris.png", id: "banner"), root_path %>
+    </div>
+  </div>
 
-<br>
 
-<% @featured_realisations.each do |fr| %>
-  <p><%= fr.title %></p>
-<% end %>
 
-<h5>Hello</h5>
+
+
+  <% @featured_realisations.each do |fr| %>
+    <p><%= fr.title %></p>
+  <% end %>
+
+</div>
+
+
+

@@ -3,6 +3,9 @@ body {
     color: black;
     font-weight: 300;
   }
+  h1 {
+    font-size: 20px;
+  }
   p {
     color: $gray;
     margin: 0;
@@ -14,4 +17,3 @@ body {
   margin-left: 200px;
   margin-right: 200px;
 }
-
