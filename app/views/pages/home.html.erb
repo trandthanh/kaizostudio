@@ -15,8 +15,9 @@
 
   <div class="home-lower">
     <h1>Réalisations récentes</h1>
-    <% @featured_realisations.each do |fr| %>
+    <% @featured_realisations.order(:created_at).each do |fr| %>
       <p><%= fr.title %></p>
+      <%= cl_image_tag fr.cover_picture, height: 300, width: 400, crop: :fill %>
     <% end %>
   </div>
 </div>

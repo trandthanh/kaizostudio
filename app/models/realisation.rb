@@ -5,4 +5,6 @@ class Realisation < ApplicationRecord
   validates :title, presence: true, uniqueness: true
   validates :subtitle, presence: true
   validates :description, presence: true
+
+  mount_uploader :cover_picture, CoverPictureUploader
 end
