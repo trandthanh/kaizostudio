@@ -19,6 +19,8 @@ gem 'webpacker'
 
 #ADDED gems
 gem 'activeadmin'
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
