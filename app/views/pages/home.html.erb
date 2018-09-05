@@ -1,11 +1,11 @@
 <div class="home-wrapper">
   <div class="home-upper">
     <div class="home-left">
-
       <% @home_descriptions.sort_by {|hd| [hd.role] }.each do |hd| %>
         <div <%= hd.style == "Heading Roboto 100 Black" ? "class=roboto-black-big" : "class=roboto-gray-small" %>>
           <%= simple_format(hd.text, {}, wrapper_tag: "h1") %>
         </div>
+        <br>
       <% end %>
     </div>
     <div class="home-right">
