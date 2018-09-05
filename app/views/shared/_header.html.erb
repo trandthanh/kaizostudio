@@ -1,20 +1,12 @@
+<div class="header col-md-offset-1 col-md-10">
+  <div class="header-left">
+    <%= link_to image_tag("kaizo-studio-logo.png", id: "logo"), root_path %>
+    <h6><%= link_to "l'agence", agence_path, class: active_path(agence_path) %></h6>
+    <h6><%= link_to "réalisations", realisations_path, class: active_path(realisations_path) %></h6>
+    <h6><%= link_to "contact", contact_path, class: active_path(contact_path) %></h6>
+  </div>
 
-
-  <div class="header">
-
-
-    <div class="header-left">
-      <%= link_to image_tag("kaizo-studio-logo.png", id: "logo"), root_path %>
-
-      <h6><%= link_to "l'agence", agence_path, class: active_path(agence_path) %></h6>
-      <h6><%= link_to "réalisations", realisations_path, class: active_path(realisations_path) %></h6>
-      <h6><%= link_to "contact", contact_path, class: active_path(contact_path) %></h6>
-    </div>
-
-    <div class="header-right">
-      <!-- <div id="phone"><a href="tel:18475555555">Click Here To Call Support 1-847-555-5555</a></div> -->
-      <div><a href="tel:+33961662607" id="phone">+33 9 61 66 26 07</a></div>
-    </div>
-
-
+  <div class="header-right">
+    <div><a href="tel:+33961662607" id="phone">+33 9 61 66 26 07</a></div>
+  </div>
 </div>

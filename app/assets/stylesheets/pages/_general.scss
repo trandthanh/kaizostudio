@@ -14,38 +14,18 @@ body {
   }
 }
 
-// .general-styling {
-//   margin-left: 200px;
-//   margin-right: 200px;
-// }
-
 .page-wrapper {
   padding-top: 50px;
-
-
   flex: 1; /* takes the remaining height of the "container" div */
   overflow: auto; /* to scroll just the "main" div */
 }
 
 .general-styling {
   padding: 0;
-
-
-
-
-
   display: flex; /* displays flex-items (children) inline */
   flex-direction: column; /* stacks them vertically */
   height: 100%; /* needs to take the parents height, alternative: body {display: flex} */
-
-
-
 }
-
-
-
-
-
 
 html, body {
   margin: 0;
