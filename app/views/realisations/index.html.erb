@@ -1,5 +1,5 @@
 <div class="page-upper">
-  <div class="home-upper">
+  <div class="page-upper">
     <div class="row">
       <div class="page-left col-md-6 col-sm-12">
         <% @realisations_descriptions.sort_by {|rd| [rd.role] }.each do |rd| %>
@@ -24,10 +24,16 @@
   </div>
 </div>
 
-<div class="home-lower">
-  <% @realisations.each do |r| %>
-    <h2><%= r.title %></h2>
-    <p><%= r.subtitle %></p>
-    <p><%= link_to "Show", realisation_path(r) %></p>
-  <% end %>
+<div class="page-lower">
+  <div class="index-cards">
+    <div class="row">
+      <% @realisations.each do |r| %>
+        <%= link_to realisation_path(r) do %>
+          <div class="index-item col-md-4">
+            <%= cl_image_tag r.cover_picture, class: "index-item-picture" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
