@@ -51,3 +51,8 @@ $border-radius-small: 2px;
 }
 
 // Override other variables below!
+
+
+.page-upper .page-right .carousel-control.left, .page-upper .page-right .carousel-control.right {
+  background-image: none;
+}
