@@ -32,7 +32,10 @@
           <div class="index-item col-md-4">
             <%= cl_image_tag r.cover_picture, class: "index-item-picture" %>
             <div class="overlay">
-              <p><%= r.title %></p>
+              <div class="overlay-text">
+                <h1><%= r.title %></h1>
+                <p><%= r.subtitle %></p>
+              </div>
             </div>
           </div>
         <% end %>

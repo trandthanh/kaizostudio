@@ -8,10 +8,8 @@
   padding-bottom: 10px;
   padding-right: 10px;
   padding-left: 0px;
-
   position: relative;
 }
-
 
 .overlay {
   position: absolute;
@@ -22,7 +20,31 @@
   height: 100%;
   width: 100%;
   opacity: 0;
+
+  padding-bottom: 20px;
+  padding-left: 10px;
   background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.overlay-text {
+  h1 {
+    color: black;
+    font-size: 23px;
+    z-index: 10;
+    opacity: 1;
+  }
+  p {
+    color: black;
+    font-size: 14px;
+    z-index: 10;
+    opacity: 1;
+  }
+  position: absolute;
+  top: 180px;
+  padding-right: 30px;
 }
 
 .index-item:hover .overlay {
