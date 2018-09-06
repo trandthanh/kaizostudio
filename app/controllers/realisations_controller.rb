@@ -3,6 +3,8 @@ class RealisationsController < ApplicationController
 
   def index
     @realisations = Realisation.all
+
+    @realisations_descriptions = Description.where("page = 'Réalisations'")
   end
 
   def show

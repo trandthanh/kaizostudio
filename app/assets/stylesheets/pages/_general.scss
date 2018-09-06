@@ -4,7 +4,7 @@ body {
     font-weight: 300;
   }
   h1 {
-    font-size: 20px;
+    font-size: 23px;
     margin: 0;
   }
   p {
@@ -34,7 +34,7 @@ html, body {
 
 .page-left {
   padding-top: 20px;
-  padding-right: 20px;
+  padding-right: 30px;
   padding-left: 0;
 }
 
@@ -62,4 +62,8 @@ html, body {
     font-size: 14px;
     font-weight: 400;
   }
+}
+
+.page-lower {
+  margin-top: 60px;
 }

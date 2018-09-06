@@ -1,7 +1,33 @@
-<h1>Hi this is the Index!</h1>
+<div class="page-upper">
+  <div class="home-upper">
+    <div class="row">
+      <div class="page-left col-md-6 col-sm-12">
+        <% @realisations_descriptions.sort_by {|rd| [rd.role] }.each do |rd| %>
+          <div
+            <% if rd.style == "Heading Roboto 300 Black" %>
+              <%= "class=roboto-black-big" %>
+            <% elsif rd.style == "Body Roboto 300 Grey" %>
+              <%= "class=roboto-gray-small" %>
+            <% elsif rd.style == "Body Roboto 400 Grey" %>
+              <%= "class=roboto-gray-bold-small" %>
+            <% end %>
+          >
+            <%= simple_format(rd.text, {}, wrapper_tag: "h1") %>
+          </div>
+          <br>
+        <% end %>
+      </div>
+      <div class="page-right col-md-6 col-sm-12">
+        <%= image_tag("nolan-issac-unsplash-agence-banner.png", id: "index-banner") %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% @realisations.each do |r| %>
-  <h2><%= r.title %></h2>
-  <p><%= r.subtitle %></p>
-  <p><%= link_to "Show", realisation_path(r) %></p>
-<% end %>
+<div class="home-lower">
+  <% @realisations.each do |r| %>
+    <h2><%= r.title %></h2>
+    <p><%= r.subtitle %></p>
+    <p><%= link_to "Show", realisation_path(r) %></p>
+  <% end %>
+</div>
