@@ -9,6 +9,7 @@ class RealisationsController < ApplicationController
   end
 
   def show
+
   end
 
   def new
@@ -42,6 +43,7 @@ class RealisationsController < ApplicationController
     @realisation = Realisation.find(params[:id])
     if @realisation.update(realisation_params)
       if params[:realisation][:photo].nil?
+        params[:realisation][:photo].reject { |c| c.empty? }
         redirect_to realisation_path(@realisation)
       else
         params[:realisation][:photo].each do |u|
@@ -68,7 +70,7 @@ class RealisationsController < ApplicationController
   end
 
   def realisation_params
-    params.require(:realisation).permit(:title, :subtitle, :description, :date, :cover_picture, { galleries: [] })
+    params.require(:realisation).permit(:title, :subtitle, :description, :date, :cover_picture, { galleries: [] }, :pictures)
   end
 
 

@@ -5,7 +5,13 @@
       <br>
       <p><%= @realisation.description %></p>
     </div>
-    <div class="page-right col-md-6 col-sm-12"></div>
+    <div class="page-right col-md-6 col-sm-12">
+      <div class="photo-box">
+          <% @realisation.pictures.each do |p| %>
+              <%= cl_image_tag p.url, width: 150 %>
+          <% end %>
+      </div>
+    </div>
   </div>
 </div>
 

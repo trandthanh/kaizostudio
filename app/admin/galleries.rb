@@ -4,7 +4,7 @@ ActiveAdmin.register Gallery do
 
   form html: { multipart: true } do |f|
     f.inputs do
-      f.input :realisation_id, as: :select, collection: Realisation.all, multiple: true
+      f.input :realisation_id, as: :select, collection: Realisation.all
       f.input :title
       f.input :photo, as: :file, input_html: { multiple: true }
     end
