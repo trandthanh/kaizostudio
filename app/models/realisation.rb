@@ -7,4 +7,7 @@ class Realisation < ApplicationRecord
   validates :description, presence: true
 
   mount_uploader :cover_picture, CoverPictureUploader
+  # serialize :photos
+  mount_uploaders :photos, PhotoUploader
+
 end

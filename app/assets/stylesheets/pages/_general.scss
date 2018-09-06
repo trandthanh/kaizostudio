@@ -11,6 +11,7 @@ body {
     color: $gray;
     margin: 0;
     font-weight: 300;
+    font-size: 14px;
   }
 }
 
@@ -54,11 +55,19 @@ html, body {
     color: $gray;
     font-size: 14px;
   }
-
+  p {
+    color: $gray;
+    font-size: 14px;
+  }
 }
 
 .roboto-gray-bold-small {
   h1 {
+    color: $gray;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  p {
     color: $gray;
     font-size: 14px;
     font-weight: 400;
