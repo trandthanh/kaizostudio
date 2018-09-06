@@ -68,7 +68,7 @@ class RealisationsController < ApplicationController
   end
 
   def realisation_params
-    params.require(:realisation).permit(:title, :subtitle, :description, :date, :cover_picture, { galleries: [] }
+    params.require(:realisation).permit(:title, :subtitle, :description, :date, :cover_picture, { galleries: [] })
   end
 
 
