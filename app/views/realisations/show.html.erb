@@ -6,20 +6,27 @@
       <p><%= @realisation.description %></p>
     </div>
     <div class="page-right col-md-6 col-sm-12">
-      <div class="photo-box">
-        <% if @realisation.pictures.nil? %>
-          <h1>Hello</h1>
-        <% else %>
-          <% @realisation.pictures.each do |p| %>
-              <%= cl_image_tag p.url, width: 150 %>
-          <% end %>
-
-        <% end %>
-
+      <div id="carousel-example-generic" class="slideshow carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="slideshow-item item active">
+                <%= cl_image_tag @realisation.cover_picture, class: "slideshow-picture d-block w-100" %>
+            </div>
+            <% @realisation.pictures.each do |p| %>
+              <div class="slideshow-item item">
+                <%= cl_image_tag p.url, class: "slideshow-picture d-block w-100" %>
+              </div>
+            <% end %>
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="icon-prev" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="icon-next" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
   </div>
 </div>
-
-
 
