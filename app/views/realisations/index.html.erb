@@ -31,6 +31,9 @@
         <%= link_to realisation_path(r) do %>
           <div class="index-item col-md-4">
             <%= cl_image_tag r.cover_picture, class: "index-item-picture" %>
+            <div class="overlay">
+              <p><%= r.title %></p>
+            </div>
           </div>
         <% end %>
       <% end %>
