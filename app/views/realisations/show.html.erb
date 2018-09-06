@@ -7,9 +7,15 @@
     </div>
     <div class="page-right col-md-6 col-sm-12">
       <div class="photo-box">
+        <% if @realisation.pictures.nil? %>
+          <h1>Hello</h1>
+        <% else %>
           <% @realisation.pictures.each do |p| %>
               <%= cl_image_tag p.url, width: 150 %>
           <% end %>
+
+        <% end %>
+
       </div>
     </div>
   </div>
