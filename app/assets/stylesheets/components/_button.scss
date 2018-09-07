@@ -1,0 +1,17 @@
+.back-button {
+  a {
+    text-decoration: none;
+    color: $gray;
+    font-weight: 300;
+    font-size: 14px;
+    &:hover {
+      color: black;
+    }
+  }
+  border: 1px solid $gray;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline;
+}
