@@ -6,6 +6,8 @@ class Realisation < ApplicationRecord
   validates :title, presence: true, uniqueness: true
   validates :subtitle, presence: true
   validates :description, presence: true
+  validates :cover_picture, presence: true
+  validates :url, presence: true
 
   mount_uploader :cover_picture, CoverPictureUploader
   # serialize :photos
