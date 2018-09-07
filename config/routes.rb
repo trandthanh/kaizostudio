@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
 
   resources :realisations
+  #resources :realisations, only: [:index, :new, :edit, :create, :update, :destroy]
+  #get 'realisations/:url', to: 'realisations#show', as: :realisation
 end
