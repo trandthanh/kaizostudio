@@ -28,7 +28,7 @@
   <div class="index-cards">
     <div class="row">
       <% @realisations.each do |r| %>
-        <%= link_to realisation_path(r) do %>
+        <%= link_to realisation_path(r.url) do %>
           <div class="index-item col-md-4">
             <%= cl_image_tag r.cover_picture, class: "index-item-picture" %>
             <div class="overlay">

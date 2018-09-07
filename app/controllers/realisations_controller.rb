@@ -36,11 +36,11 @@ class RealisationsController < ApplicationController
 
 
   def edit
-    @realisation = Realisation.find(params[:id])
+    @realisation = Realisation.find_by_url(params[:url])
   end
 
   def update
-    @realisation = Realisation.find(params[:id])
+    @realisation = Realisation.find_by_url(params[:url])
     if @realisation.update(realisation_params)
       if params[:realisation][:photo].nil?
         params[:realisation][:photo].reject { |c| c.empty? }
@@ -66,11 +66,11 @@ class RealisationsController < ApplicationController
   private
 
   def set_realisations
-    @realisation = Realisation.find(params[:id])
+    @realisation = Realisation.find_by_url(params[:url])
   end
 
   def realisation_params
-    params.require(:realisation).permit(:title, :subtitle, :description, :date, :cover_picture, { galleries: [] }, :pictures)
+    params.require(:realisation).permit(:title, :subtitle, :description, :date, :cover_picture, { galleries: [] }, :pictures, :url)
   end
 
 

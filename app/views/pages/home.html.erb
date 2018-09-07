@@ -29,7 +29,7 @@
   <div class="home-slider">
     <div class="row">
       <% @featured_realisations.order(:created_at).each do |fr| %>
-        <%= link_to realisation_path(fr) do %>
+        <%= link_to realisation_path(fr.url) do %>
           <div class="home-slider-item col-md-2">
               <%= cl_image_tag fr.cover_picture, class: "home-slider-picture" %>
               <p><%= fr.title %></p>
