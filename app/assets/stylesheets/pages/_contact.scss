@@ -16,3 +16,10 @@
 .contact-info-right {
   display: flex;
 }
+
+.map {
+  margin-top: 10px;
+  iframe {
+    width: 80%;
+  }
+}
