@@ -8,27 +8,54 @@
     <div class="page-right col-md-6 col-sm-12">
       <div id="carousel-example-generic" class="slideshow carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
-          <div class="slideshow-item item active" type="button" data-toggle="modal" data-target="#exampleModal" style="cursor:pointer">
-            <%= cl_image_tag @realisation.cover_picture, class: "slideshow-picture d-block w-100", class: "myImg" %>
-          </div>
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+
+            <div class="slideshow-item item active">
+               <a href="#" class="pop">
+            <!-- <div class="slideshow-item item active" type="button" data-toggle="modal" data-target="#exampleModal" style="cursor:pointer"> -->
+              <%= cl_image_tag @realisation.cover_picture, class: "slideshow-picture d-block w-100", class: "myImg" %>
+          </a>
+            </div>
+<!--           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <%= cl_image_tag @realisation.cover_picture, class: "slideshow-banner" %>
+                  <#%= cl_image_tag @realisation.cover_picture, class: "slideshow-banner" %>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <img src="" class="imagepreview" style="width: 100%;" >
                 </div>
               </div>
             </div>
           </div>
           <% @realisation.pictures.each do |p| %>
-            <div class="slideshow-item item" type="button" data-toggle="modal" data-target="#exampleModal" style="cursor:pointer">
-              <%= cl_image_tag p.url, class: "slideshow-picture d-block w-100" %>
-            </div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <!-- <div class="slideshow-item item" type="button" data-toggle="modal" data-target="#exampleModal" style="cursor:pointer"> -->
+                <div class="slideshow-item item">
+            <a href="#" class="pop">
+                  <%= cl_image_tag p.url, class: "slideshow-picture d-block w-100" %>
+            </a>
+                </div>
+<!--             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <%= cl_image_tag p.url, class: "slideshow-banner" %>
+                    <#%= cl_image_tag p.url, class: "slideshow-banner" %>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <img src="" class="imagepreview" style="width: 100%;" >
                   </div>
                 </div>
               </div>
@@ -52,6 +79,9 @@
     <%= link_to "retour aux réalisations", realisations_path  %>
   </div>
 </div>
+
+
+
 
 
 

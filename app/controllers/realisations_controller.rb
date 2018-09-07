@@ -9,7 +9,6 @@ class RealisationsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
