@@ -1,5 +1,5 @@
 <div class="page-upper">
-  <div class="row">
+<!--   <div class="row"> -->
     <div class="page-left col-md-6 col-sm-12">
       <% @home_descriptions.sort_by {|hd| [hd.role] }.each do |hd| %>
         <div
@@ -19,15 +19,15 @@
     <div class="page-right col-md-6 col-sm-12">
       <%= link_to image_tag("kaizo-studio-design-appartement-aboukir-paris.png", id: "banner"), root_path %>
     </div>
-  </div>
+<!--   </div> -->
 </div>
 
 <div class="page-lower">
-  <div class="row">
+<!--   <div class="row"> -->
     <h1>Réalisations récentes</h1>
-  </div>
+<!--   </div> -->
   <div class="home-slider">
-    <div class="row">
+<!--     <div class="row"> -->
       <% @featured_realisations.order(:created_at).each do |fr| %>
         <%= link_to realisation_path(fr.url) do %>
           <div class="home-slider-item col-md-2">
@@ -41,10 +41,10 @@
           <%= image_tag "add.png", class: "plus-sign" %>
         <% end %>
       </div>
-    </div>
+<!--     </div> -->
   </div>
 </div>
 
-<%= render 'cookies_eu/consent_banner', link: '/cookies' %>
+<%#= render 'cookies_eu/consent_banner', link: '/cookies' %>
 
 

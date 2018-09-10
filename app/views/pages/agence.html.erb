@@ -1,22 +1,24 @@
-<div class="row">
-  <div class="page-left col-md-6 col-sm-12">
-    <% @agence_descriptions.sort_by {|ad| [ad.role] }.each do |ad| %>
-      <div
-        <% if ad.style == "Heading Roboto 300 Black" %>
-          <%= "class=roboto-black-big" %>
-        <% elsif ad.style == "Body Roboto 300 Grey" %>
-          <%= "class=roboto-gray-small" %>
-        <% elsif ad.style == "Body Roboto 400 Grey" %>
-          <%= "class=roboto-gray-bold-small" %>
-        <% end %>
-      >
-        <%= simple_format(ad.text, {}, wrapper_tag: "h1") %>
-      </div>
-      <br>
-    <% end %>
+<!-- <div class="row"> -->
+  <div class="page-upper">
+    <div class="page-left col-md-6 col-sm-12">
+      <% @agence_descriptions.sort_by {|ad| [ad.role] }.each do |ad| %>
+        <div
+          <% if ad.style == "Heading Roboto 300 Black" %>
+            <%= "class=roboto-black-big" %>
+          <% elsif ad.style == "Body Roboto 300 Grey" %>
+            <%= "class=roboto-gray-small" %>
+          <% elsif ad.style == "Body Roboto 400 Grey" %>
+            <%= "class=roboto-gray-bold-small" %>
+          <% end %>
+        >
+          <%= simple_format(ad.text, {}, wrapper_tag: "h1") %>
+        </div>
+        <br>
+      <% end %>
+    </div>
+    <div class="page-right col-md-6 col-sm-12">
+      <%= image_tag("alexandru-acea-unsplash-agence-banner.png", id: "agence-banner") %>
+    </div>
   </div>
-  <div class="page-right col-md-6 col-sm-12">
-    <%= image_tag("alexandru-acea-unsplash-agence-banner.png", id: "agence-banner") %>
-  </div>
-</div>
+<!-- </div> -->
 

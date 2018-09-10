@@ -1,6 +1,6 @@
-<div class="page-upper">
+<!-- <div class="page-upper"> -->
   <div class="page-upper">
-    <div class="row">
+<!--     <div class="row"> -->
       <div class="page-left col-md-6 col-sm-12">
         <% @realisations_descriptions.sort_by {|rd| [rd.role] }.each do |rd| %>
           <div
@@ -20,11 +20,11 @@
       <div class="page-right col-md-6 col-sm-12">
         <%= image_tag("nolan-issac-unsplash-agence-banner.png", id: "index-banner") %>
       </div>
-    </div>
+<!--     </div> -->
   </div>
-</div>
+<!-- </div> -->
 
-<div class="page-lower">
+<div class="page-lower card-section">
   <div class="index-cards">
     <div class="row">
       <% @realisations.each do |r| %>

@@ -19,6 +19,12 @@ body {
   padding-top: 40px;
   flex: 1; /* takes the remaining height of the "container" div */
   overflow: auto; /* to scroll just the "main" div */
+
+  padding-left: 100px;
+  padding-right: 100px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .general-styling {
@@ -37,6 +43,7 @@ html, body {
   padding-top: 20px;
   padding-right: 30px;
   padding-left: 0;
+
 }
 
 .page-right {
@@ -83,4 +90,9 @@ html, body {
 
 .page-lower {
   margin-top: 60px;
+}
+
+.card-section {
+  padding-left: 5px;
+  padding-right: 5px;
 }
