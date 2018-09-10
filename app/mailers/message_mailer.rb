@@ -7,6 +7,9 @@ class MessageMailer < ApplicationMailer
   #
   def contact_me(message)
     @body = message.body
+    @name = message.name
+    @phone = message.phone
+    @email = message.email
 
     mail to: "kaizostudio.dev@gmail.com", from: message.email
   end
