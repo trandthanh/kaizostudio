@@ -21,8 +21,15 @@
   margin-top: 10px;
   iframe {
     width: 80%;
+    .place-card {
+      display: none;
+    }
+    .place-card-large {
+      display: none;
+    }
   }
 }
 
 input, textarea { display: block; }
+
 
