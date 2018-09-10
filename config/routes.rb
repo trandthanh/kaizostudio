@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   get 'agence', to: 'pages#agence'
 
-  get 'contact', to: 'pages#contact'
+  #get 'contact', to: 'pages#contact'
+  get 'contact', to: 'messages#new', as: 'new_message'
+  post 'contact', to: 'messages#create', as: 'create_message'
 
   #resources :realisations
   get 'realisations/:url', to: 'realisations#show'

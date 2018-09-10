@@ -22,6 +22,7 @@ gem 'activeadmin'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'figaro'
 
 
 group :development do
