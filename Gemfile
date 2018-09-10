@@ -23,6 +23,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'figaro'
+gem 'cookies_eu'
 
 
 group :development do

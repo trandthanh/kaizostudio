@@ -34,4 +34,4 @@ en:
 
   message_mailer:
     contact_me:
-      subject: "Message from the website -"
+      subject: "Formulaire de contact"
