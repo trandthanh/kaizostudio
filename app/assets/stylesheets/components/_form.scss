@@ -1,0 +1,47 @@
+.wrapper-form {
+  margin-top: 75px;
+}
+
+.form-inputs {
+  width: 100%;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 1px solid $gray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.page-left-contact {
+  padding-top: 20px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.form-controls {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+input {
+  border-width: 0;
+}
+
+.form-body {
+  border-left: 1px solid $gray;
+  border-right: 1px solid $gray;
+  height: 245px;
+}
+
+.form-button {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid $gray;
+}

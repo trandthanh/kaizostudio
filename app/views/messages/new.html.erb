@@ -1,6 +1,6 @@
 <div class="page-upper">
   <div class="row">
-    <div class="page-left col-md-8 col-sm-12">
+    <div class="page-left-contact col-md-8 col-sm-12">
       <h1>Nous contacter</h1>
 
       <br>
@@ -32,16 +32,20 @@
       </div>
     </div>
     <div class="page-right col-md-4 col-sm-12">
-      <%= form_for @message, url: create_message_url do |f| %>
-        <%= notice %>
-        <%= @message.errors.full_messages.join(', ') %>
+      <div class="wrapper-form">
+        <%= form_for @message, url: create_message_url do |f| %>
+          <%= notice %>
+          <%= @message.errors.full_messages.join(', ') %>
 
-        <%= f.text_field :name, placeholder: 'name' %>
-        <%= f.email_field :email, placeholder: 'email' %>
-        <%= f.phone_field :phone, placeholder: 'phone' %>
-        <%= f.text_area :body, placeholder: 'body' %>
-        <%= f.submit 'Send' %>
-      <% end %>
+          <%= f.text_field :name, placeholder: 'Votre nom', class: "form-inputs" %>
+          <%= f.email_field :email, placeholder: 'Votre e-mail', class: "form-inputs" %>
+          <%= f.phone_field :phone, placeholder: 'Votre numéro de téléphone', class: "form-inputs" %>
+          <%= f.text_area :body, placeholder: 'Votre message', class: "form-inputs form-body" %>
+          <div class="form-controls">
+            <%= f.submit 'Send', value: 'ENVOYER', class: "form-button" %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
