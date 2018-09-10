@@ -35,7 +35,6 @@
     <div class="page-right col-md-4 col-sm-12">
       <div class="wrapper-form">
         <%= form_for @message, url: create_message_url do |f| %>
-          <%= notice %>
           <%= @message.errors.full_messages.join(', ') %>
 
           <%= f.text_field :name, placeholder: 'Votre nom', class: "form-inputs" %>
