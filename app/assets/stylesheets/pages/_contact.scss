@@ -10,11 +10,17 @@
 
 .contact-info-left {
   display: flex;
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
 .contact-info-right {
   display: flex;
+}
+
+.contact-info-middle {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
 }
 
 .map {
@@ -34,3 +40,6 @@
 input, textarea { display: block; }
 
 
+#phone-contact {
+
+}
