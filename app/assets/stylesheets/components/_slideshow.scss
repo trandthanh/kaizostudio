@@ -7,3 +7,16 @@
 .modal-body {
   margin: auto;
 }
+
+.carousel-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    font-size: 50px;
+  }
+}
+
+.test:first-child {
+  color:red;
+}

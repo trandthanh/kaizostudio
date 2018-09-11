@@ -5,6 +5,8 @@ class PagesController < ApplicationController
     @home_descriptions = Description.where("page = 'Home'")
 
     @featured_realisations = Realisation.where(:featured => true)
+
+    @banner_realisation = Realisation.find_by_url('appartement-aboukir')
   end
 
   def agence

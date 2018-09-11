@@ -1,16 +1,31 @@
 <div class="page-upper">
-  <div class="row">
-    <div class="page-left col-md-6 col-sm-12">
-      <h1 class="roboto-black-big"><%= @realisation.title %></h1>
-      <br>
-      <p><%= @realisation.description %></p>
-    </div>
-    <div class="page-right col-md-6 col-sm-12">
-      <div id="carousel-example-generic" class="slideshow carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-          <div class="slideshow-item item active">
+
+  <div class="page-left col-md-6 col-sm-12">
+    <h1 class="roboto-black-big"><%= @realisation.title %></h1>
+    <br>
+    <p><%= @realisation.description %></p>
+  </div>
+  <div class="page-right col-md-6 col-sm-12">
+    <div id="carousel-example-generic" class="slideshow carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="slideshow-item item active">
+          <a href="#" class="pop">
+            <%= cl_image_tag @realisation.cover_picture, class: "slideshow-picture d-block w-100", class: "myImg" %>
+          </a>
+        </div>
+        <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="" class="imagepreview slideshow-banner" >
+              </div>
+            </div>
+          </div>
+        </div>
+        <% @realisation.pictures.each do |p| %>
+          <div class="slideshow-item item">
             <a href="#" class="pop">
-              <%= cl_image_tag @realisation.cover_picture, class: "slideshow-picture d-block w-100", class: "myImg" %>
+              <%= cl_image_tag p.url, class: "slideshow-picture d-block w-100" %>
             </a>
           </div>
           <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -22,44 +37,26 @@
               </div>
             </div>
           </div>
-          <% @realisation.pictures.each do |p| %>
-            <div class="slideshow-item item">
-              <a href="#" class="pop">
-                <%= cl_image_tag p.url, class: "slideshow-picture d-block w-100" %>
-              </a>
-            </div>
-            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <img src="" class="imagepreview slideshow-banner" >
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="icon-prev" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control right" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="icon-next" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+        <% end %>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="icon-prev" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control right" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="icon-next" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
+
+</div>
 </div>
 
-<div class="page-lower text-center">
+
+<div class="page-lower-show text-center">
   <div class="back-button text-center">
     <%= link_to "retour aux réalisations", realisations_path  %>
   </div>
 </div>
-
-
-
-
-
 
 
