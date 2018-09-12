@@ -27,12 +27,124 @@
 .active-slide-2 {
   display: block !important;
   z-index: 2;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .slide-2 {
   display: none;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .slider-2 {
   position: relative;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.slideshow-2 {
+  position: relative;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.arrow-prev-2 {
+
+}
+
+.slideshow-control-left-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+.slideshow-control-right-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.control-2 {
+  i {
+    font-size: 50px;
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.5;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    &:hover {
+      text-decoration: none;
+      color: white;
+      opacity: 1;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

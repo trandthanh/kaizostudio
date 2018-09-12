@@ -16,7 +16,7 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-body">
-
+                <div class="slideshow-2">
                 <div class="slider-2">
                   <div class="slide-2 active-slide-2">
                     <!-- <img src="" class="imagepreview slideshow-banner" > -->
@@ -28,12 +28,12 @@
                     </div>
                   <% end %>
                 </div>
+                <!-- <a href="#" class="arrow-prev-2"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a> -->
+                  <a href="#" class="control-2 arrow-prev-2 slideshow-control-left-2"><i class="fas fa-angle-left"></i></a>
+                  <!-- <a href="#" class="arrow-next-2"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a> -->
+                  <a href="#" class="control-2 arrow-next-2 slideshow-control-right-2"><i class="fas fa-angle-right"></i></a>
 
-                  <a href="#" class="arrow-prev-2"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
-                  <a href="#" class="arrow-next-2"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
-
-
-
+                </div>
 
               </div>
             </div>
@@ -49,7 +49,24 @@
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-body">
-                  <img src="" class="imagepreview slideshow-banner" >
+                  <div class="slideshow-2">
+                      <div class="slider-2">
+                        <div class="slide-2 active-slide-2">
+                          <!-- <img src="" class="imagepreview slideshow-banner" > -->
+                          <%= cl_image_tag @realisation.cover_picture, class: "slideshow-banner" %>
+                        </div>
+                        <% @realisation.pictures.each do |c| %>
+                          <div class="slide-2">
+                            <%= cl_image_tag c.url, class: "slideshow-banner" %>
+                          </div>
+                        <% end %>
+                      </div>
+                      <!-- <a href="#" class="arrow-prev-2"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a> -->
+                      <a href="#" class="control-2 arrow-prev-2 slideshow-control-left-2"><i class="fas fa-angle-left"></i></a>
+                      <!-- <a href="#" class="arrow-next-2"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a> -->
+                      <a href="#" class="control-2 arrow-next-2 slideshow-control-right-2"><i class="fas fa-angle-right"></i></a>
+
+                  </div>
                 </div>
               </div>
             </div>
