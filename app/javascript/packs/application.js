@@ -23,8 +23,8 @@ $('.arrow-next-2').click(function() {
      nextSlide = $('.slide-2').first() ;
     }
     //when the arrow is clicked, fade out the current img and fade in the next one
-    currentSlide.fadeOut(100).removeClass('active-slide-2');
-    nextSlide.fadeIn(100).addClass('active-slide-2');
+    currentSlide.fadeOut(0).removeClass('active-slide-2');
+    nextSlide.fadeIn(0).addClass('active-slide-2');
 });
 $('.arrow-prev-2').click(function(){
     //creating the variables so that we can target them in jQuery
@@ -35,8 +35,8 @@ $('.arrow-prev-2').click(function(){
     prevSlide = $('.slide-2').last();
     }
     //fade out the current img and fade in the prev one when the arrow is clicked
-    currentSlide.fadeOut(100).removeClass('active-slide-2')
-    prevSlide.fadeIn(100).addClass('active-slide-2')
+    currentSlide.fadeOut(0).removeClass('active-slide-2')
+    prevSlide.fadeIn(0).addClass('active-slide-2')
 });
 }
 
