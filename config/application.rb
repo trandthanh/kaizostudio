@@ -22,6 +22,4 @@ module Kaizostudio
     # the framework and any gems in your application.
     config.exceptions_app = self.routes
   end
-
-  config.exceptions_app = self.routes
 end
