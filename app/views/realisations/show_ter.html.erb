@@ -16,25 +16,7 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-body">
-
-                <div class="slider-2">
-                  <div class="slide-2 active-slide-2">
-                    <!-- <img src="" class="imagepreview slideshow-banner" > -->
-                    <%= cl_image_tag @realisation.cover_picture, class: "slideshow-banner" %>
-                  </div>
-                  <% @realisation.pictures.each do |p| %>
-                    <div class="slide-2">
-                      <%= cl_image_tag p.url, class: "slideshow-banner" %>
-                    </div>
-                  <% end %>
-                </div>
-
-                  <a href="#" class="arrow-prev-2"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
-                  <a href="#" class="arrow-next-2"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
-
-
-
-
+                <img src="" class="imagepreview slideshow-banner" >
               </div>
             </div>
           </div>
