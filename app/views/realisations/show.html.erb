@@ -1,3 +1,11 @@
+<!-- SEO -->
+<% content_for :meta_title, "#{DEFAULT_META["meta_product_name"]} | #{@realisation.title}" %>
+<% content_for :meta_description, @realisation.description %>
+<% content_for :meta_image, cl_image_path(@realisation.cover_picture.url) %>
+
+
+
+
 <div class="page-upper">
   <div class="page-left col-md-6 col-sm-12">
     <h1 class="roboto-black-big"><%= @realisation.title %></h1>

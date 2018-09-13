@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   get "/404", to: 'errors#not_found'
   get "/422", to: 'errors#unacceptable'
   get "/500", to: 'errors#internal_server_error'
+
+  # 301 redirect from old URLs
+  get "/old_path_to_realisations/:id", to: redirect("/realisations/%{id}s")
 end
